@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Stone paper scissor</title>
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta name="theme-color" content="#ff972f">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#ff972f">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/font-osm.css">
+    <link rel="shortcut icon" href="./ico.png">
+    <meta name="og:url" content="" />
+    <meta name="og:image" content="https://chattgogame.netlify.com/assets/img/ico.png" />
+
+    <meta name="description" content="Rock paper scissor is fun game. Play it for entertenment..." />
+    <meta name="og:descriPtion" content="Rock paper scissor is fun game. play it for entertenment..." />
+    <meta name="keywords" content="game, rock paper scissor" />
+    <meta name="google" content="notranslate" />
+
+    <script src="./assets/js/main.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+<body>
+    <audio id="sound1">
+        <source src="./assets/sound/button-1.mp3" type="audio/mp3"></source>
+    </audio>
+    <audio id="sound2">
+        <source src="./assets/sound/button-10.mp3" type="audio/mp3"></source>
+    </audio>
+    <audio id="sound3">
+        <source src="./assets/sound/button-3.mp3" type="audio/mp3"></source>
+    </audio>
+    <audio id="sound4">
+        <source src="./assets/sound/button-4.mp3" type="audio/mp3"></source>
+    </audio>
+    <audio id="sound5">
+        <source src="./assets/sound/button-2.mp3" type="audio/mp3"></source>
+    </audio>
+
+    <i id="mute" style="color: #000; font-size:2rem;margin: 1rem;cursor: pointer;" class="fa fa-volume-up"></i>
+    <a href="./help.html" title="help" style="float: right; color: #000; font-size:2rem;margin: 1rem;"><i class="fa fa-question-circle"></i></a>
+    <form class="set-round" id="set-round">
+        <span><small id="error"></small></span>
+        <input type="text" id="playerName" class="playerName" autocomplete="off" placeholder="Player Name" />
+        <input type="number" id="rounds" class="rounds" required autocomplete="off" placeholder="Set Round" />
+        <input type="submit" class="submit-round" value="Play" />
+    </form>
+    <section class="final-greeting-model" id="final-greeting-model">
+        <div class="greeting-model-content" id="greeting-model-content"></div>
+    </section>
+    <section class="container" id="game-start">
+        <div style="text-align: center; margin-top: 1rem">
+            <button class="restart" id="restart"><i class="fas fa-redo-alt"></i></button>
+        </div>
+        
+        <section class="con-score" style="margin-top: 8rem; ">
+            <p id="draw" class="draw" title="Draw" style="transform: translate(140px, -103px);">
+                <i class="fa fa-bolt"></i> 0
+            </p>
+            <p id="playerscore" class="playerscore" title="Your score" style="transform: translate(-2px, -69px);">
+                <i class="fa fa-user-o"></i> 0
+            </p>
+            <p id="computerscore" class="computerscore" title="Oppoent score" style="transform: translate(-52px, 12px);">
+                <i class="fa fa-laptop"></i> 0
+            </p>
+            <p id="round" class="round" title="Played Round" style="transform: translate(-35px, 17px);">
+                <i class="fa fa-history"></i> 0
+            </p>
+            <p id="total-round" class="total-round" title="Total Round" style="transform: translate(-56px, -58px);">
+                <i class="fa fa-retweet"></i> 0
+            </p>
+        </section>
+        <div class="con" id="stonPaperScissor">
+            <div>
+                <img id="paper" src="./assets/img/paper.png" >
+                <p>Paper</p>
+            </div>
+            <div>
+                <img id="scissors" src="./assets/img/scissors.png" >
+                <p>scissors</p>
+            </div>
+            <div>
+                <img id="rock" src="./assets/img/rock.png" >
+                <p>Rock</p>
+            </div>
+        </div>
+        <div class="model model-container" id="model-container">
+            <div class="model-content">
+                <div id="result"></div>
+            </div>
+        </div>
+    </section>
+   
+</body>
+</html>
